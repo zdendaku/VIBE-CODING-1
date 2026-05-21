@@ -1,0 +1,9 @@
+[project]
+name = "homework-lesson-1"
+version = "0.1.0"
+description = "Homework: Python script calling LLM API with tool use"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic",
+    "python-dotenv",
+]

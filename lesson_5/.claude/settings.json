@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Read(./**)",
+      "Glob(./**)",
+      "Grep(./**)",
+      "Write(./tests/**)",
+      "Write(./demo_project/**)",
+      "Edit(./demo_project/**)",
+      "Bash(pytest:*)",
+      "Bash(ruff:*)",
+      "Bash(uv run:*)",
+      "Bash(python:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "mcp__project-insights__count_lines_of_code",
+      "mcp__project-insights__find_todos",
+      "mcp__project-insights__python_complexity",
+      "mcp__project-insights__project_summary"
+    ],
+    "deny": [
+      "Bash(rm -rf:*)",
+      "Bash(git push:*)",
+      "Bash(git reset --hard:*)",
+      "Write(./.env)",
+      "Read(./.env)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": ["project-insights", "fetch"],
+  "env": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  }
+}
